@@ -141,7 +141,7 @@ class vEBTree:
                 self.min = 0
             self.max = self.min  # now min == max means only one item in the cluster
         else:
-            if x == self.min:  # replace min with predecessor then remove the predecessor in cluster
+            if x == self.min:  # replace min with successor then remove the successor in cluster
                 first_cluster = self.summary.min
                 x = self.index(first_cluster, self.clusters[first_cluster].min)
                 self.min = x
